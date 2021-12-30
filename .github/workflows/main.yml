@@ -1,0 +1,18 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: nyakaz73/heroku-django-deploy@v0.53
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "murmuring-springs-71288"
+          heroku_email: "zhangchi211@mails.ucas.ac.cn"
+          use_git: true
