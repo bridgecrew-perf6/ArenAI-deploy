@@ -18,4 +18,5 @@ jobs:
     - name: Build and push
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      run: heroku git:remote -a murmuring-springs-71288
       run: git push heroku :refs/heads/main
