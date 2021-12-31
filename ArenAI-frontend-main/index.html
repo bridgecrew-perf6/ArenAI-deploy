@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArenAI</title>
+  </head>
+  <body>
+    <div id="app" style="min-height: 100vh;"></div>
+    <script type="module" src="/src/main.js"></script>
+    
+    <input type="checkbox" id="global-notify" class="modal-toggle" /> 
+    <div class="modal">
+      <div class="modal-box">
+        <h2 class="card-title" id="global-notify-title"></h2> 
+        <p id="global-notify-content"></p> 
+        <div class="modal-action">
+          <label for="global-notify" class="btn">确定</label>
+        </div>
+      </div>
+    </div>
+
+    <input type="checkbox" id="loading-modal" class="modal-toggle" /> 
+    <div class="modal bg-blue-50">
+      <!-- <div class="modal-box">
+        <p>Enim dolorem dolorum omnis atque necessitatibus. Consequatur aut adipisci qui iusto illo eaque. Consequatur repudiandae et. Nulla ea quasi eligendi. Saepe velit autem minima.</p> 
+        <div class="modal-action">
+          <a href="/components/modal#" class="btn btn-primary">Accept</a> 
+          <a href="/components/modal#" class="btn">Close</a>
+        </div>
+      </div> -->
+      <button class="btn btn-sm btn-ghost loading" id="loading-modal-content"></button>
+    </div>
+
+    <input type="checkbox" id="translucent-loading-modal" class="modal-toggle" /> 
+    <div class="modal">
+      <!-- <div class="modal-box">
+        <p>Enim dolorem dolorum omnis atque necessitatibus. Consequatur aut adipisci qui iusto illo eaque. Consequatur repudiandae et. Nulla ea quasi eligendi. Saepe velit autem minima.</p> 
+        <div class="modal-action">
+          <a href="/components/modal#" class="btn btn-primary">Accept</a> 
+          <a href="/components/modal#" class="btn">Close</a>
+        </div>
+      </div> -->
+      <button class="btn btn-sm btn-ghost loading" id="translucent-loading-modal-content"></button>
+    </div>
+    
+  </body>
+</html>
