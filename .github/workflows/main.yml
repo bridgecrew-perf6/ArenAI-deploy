@@ -9,21 +9,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    steps:
+  steps:
     - uses: actions/checkout@v2
     - name: Heroku login credentials
-        run: |
-          cat > ~/.netrc <<EOF
-            machine api.heroku.com
-              login $HEROKU_EMAIL
-              password $HEROKU_API_KEY
-            machine git.heroku.com
-              login $HEROKU_EMAIL
-              password $HEROKU_API_KEY
-          EOF
-        env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-          HEROKU_EMAIL: "zhangchi211@mails.ucas.ac.cn"
+      run: |
+        cat > ~/.netrc <<EOF
+          machine api.heroku.com
+            login $HEROKU_EMAIL
+            password $HEROKU_API_KEY
+          machine git.heroku.com
+            login $HEROKU_EMAIL
+            password $HEROKU_API_KEY
+        EOF
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        HEROKU_EMAIL: "zhangchi211@mails.ucas.ac.cn"
     - name: Connect
       env:
         HEROKU_EMAIL_ADDRESS: "zhangchi211@mails.ucas.ac.cn"
