@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      - name: Heroku login credentials
+    - name: Heroku login credentials
         run: |
           cat > ~/.netrc <<EOF
             machine api.heroku.com
