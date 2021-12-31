@@ -16,3 +16,4 @@ jobs:
           heroku_app_name: "murmuring-springs-71288"
           heroku_email: "zhangchi211@mails.ucas.ac.cn"
           appdir: "ArenAi-backend"
+          dontuseforce: false
