@@ -11,6 +11,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: insteadOf
+      run: git config --global url."git@heroku.com:".insteadOf "https://github.com/"
     - name: Login to Heroku Container registry
       env: 
         HEROKU_EMAIL_ADDRESS: "zhangchi211@mails.ucas.ac.cn"
