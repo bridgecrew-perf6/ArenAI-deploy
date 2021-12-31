@@ -1,0 +1,2 @@
+django: sh -c 'cd ./directory/ && exec appname' && gunicorn ArenAI.wsgi --log-file -
+node: node server.js
