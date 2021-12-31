@@ -13,8 +13,9 @@ jobs:
     - uses: actions/checkout@v1
     - name: Login to Heroku Container registry
       env: 
+        HEROKU_EMAIL_ADDRESS: "zhangchi211@mails.ucas.ac.cn"
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:login 
+      run: heroku login 
     - name: Connect
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
