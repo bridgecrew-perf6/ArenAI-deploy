@@ -15,3 +15,10 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "murmuring-springs-71288"
           heroku_email: "zhangchi211@mails.ucas.ac.cn"
+          appdir: "ArenAI-frontend-main"
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "murmuring-springs-71288"
+          heroku_email: "zhangchi211@mails.ucas.ac.cn"
+          appdir: "ArenAi-backend-main"
