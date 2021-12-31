@@ -1,6 +1,0 @@
-[submodule "ArenAI-frontend"]
-	path = ArenAI-frontend
-	url = https://github.com/LIIHWF/ArenAI-frontend
-[submodule "ArenAi-backend"]
-	path = ArenAi-backend
-	url = https://github.com/LIIHWF/ArenAi-backend
