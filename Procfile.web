@@ -1,2 +1,2 @@
-django: sh -c 'cd ./ArenAi-backend-main/ && gunicorn ArenAI.wsgi --log-file -'
+django: gunicorn ArenAI.wsgi --log-file -
 node: npm run dev
