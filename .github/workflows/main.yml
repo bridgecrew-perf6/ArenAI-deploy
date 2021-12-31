@@ -33,5 +33,4 @@ jobs:
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         run: |
-          git remote prune origin
-          git push --force-with-lease heroku :refs/heads/main
+          git remote rm origin
