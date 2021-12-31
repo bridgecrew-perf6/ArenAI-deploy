@@ -1,0 +1,6 @@
+[submodule "ArenAi-backend"]
+	path = ArenAi-backend
+	url = https://github.com/iscas-zac/ArenAi-backend
+[submodule "ArenAi-frontend"]
+	path = ArenAi-frontend
+	url = https://github.com/iscas-zac/ArenAi-frontend
