@@ -16,3 +16,5 @@ jobs:
           heroku_app_name: "murmuring-springs-71288"
           heroku_email: "zhangchi211@mails.ucas.ac.cn"
           buildpack: “https://github.com/heroku/nodejs-npm-buildpack.git”
+          # https://stackoverflow.com/questions/60603527/error-r10-boot-timeout-web-process-failed-to-bind-to-port-within-60-second/60603927#60603927
+          # https://stackoverflow.com/questions/69444225/how-do-i-deploy-to-heroku-using-vite

@@ -1,2 +1,2 @@
 django: gunicorn ArenAI.wsgi --log-file -
-node: npm i -dev && npm run dev
+node: unset NODE_ENV && set NPM_CONFIG_PRODUCTION=false && npm i -dev && npm run dev
