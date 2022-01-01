@@ -1,0 +1,30 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "murmuring-springs-71288"
+          heroku_email: "zhangchi211@mails.ucas.ac.cn"
+          justlogin: true
+          buildpack: “https://github.com/heroku/nodejs-npm-buildpack.git”
+          # https://stackoverflow.com/questions/60603527/error-r10-boot-timeout-web-process-failed-to-bind-to-port-within-60-second/60603927#60603927
+          # https://stackoverflow.com/questions/69444225/how-do-i-deploy-to-heroku-using-vite
+      - run: |
+        git config user.name "Heroku-Deploy"
+        git config user.email "zhangchi211@mails.ucas.ac.cn"
+        git add -A && git commit -m "Commited changes from previous actions"
+        heroku git:remote -a murmuring-springs-71288
+        heroku config:set 
+        git push heroku main:refs/heads/main --force
+
+
