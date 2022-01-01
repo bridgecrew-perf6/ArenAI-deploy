@@ -1,2 +1,2 @@
-django: gunicorn ArenAI.wsgi --log-file -
-node: unset NODE_ENV && set NPM_CONFIG_PRODUCTION=false && npm i -dev && npm run dev
+django: gunicorn ArenAI.wsgi --bind 127.0.0.1:$DJANGO_PORT
+node: npm run start

@@ -2,9 +2,11 @@
   "name": "arenai-frontend",
   "version": "0.0.0",
   "scripts": {
+    "start": "unset NODE_ENV && set NPM_CONFIG_PRODUCTION=false && npm i -dev",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "heroku-postbuild": "vite"
   },
   "dependencies": {
     "@headlessui/vue": "^1.4.2",
