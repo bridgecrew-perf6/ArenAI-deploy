@@ -1,7 +1,0 @@
-django-cors-headers
-django_rename_app
-channels==3.0.4
-Django==4.0
-djangorestframework==3.13.1
-pip==20.0.2
-gunicorn==20.0.4

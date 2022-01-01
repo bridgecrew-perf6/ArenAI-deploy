@@ -15,3 +15,4 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "murmuring-springs-71288"
           heroku_email: "zhangchi211@mails.ucas.ac.cn"
+          buildpack: “https://github.com/heroku/nodejs-npm-buildpack.git”
